@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Software Specialist Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Add styles for the portfolio */
+      /* Body */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+
+      /* Header */
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+
+      /* Section for marketable skills */
+      section.skills {
+        background-color: #f1f1f1;
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Section for mission statement */
+      section.mission {
+        padding: 1em;
+      }
+
+      /* Section for career summary */
+      section.summary {
+        padding: 1em;
+      }
+
+      /* Section for showcase projects */
+      section.projects {
+        background-color: #f1f1f1;
+        padding: 1em;
+      }
+
+      /* Side column for contact information */
+      aside.contact {
+        background-color: #f1f1f1;
+        padding: 1em;
+      }
+
+      /* Use media queries to make the layout responsive */
+      @media (max-width: 600px) {
+        aside.contact {
+          display: none;
+        }
+      }
+      /* Add contact information to the footer on small screens */
+      footer {
+        background-color: #f1f1f1;
+        padding: 1em;
+        text-align: center;
+      }
+      @media (min-width: 600px) {
+        footer {
+          display: none;
+        }
+      }
+
+      /* Section for contacting the software specialist */
+      section.contact-me {
+        background-color: #333;
+        color: white;
+        /* padding: 1em; */
+      }
+
+      /* Use media query to adjust contact form layout on small screens */
+      @media (max-width: 600px) {
+        form {
+          flex-direction: column;
+          background-color: #f1f1f1;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          margin: 0.5em 0;
+        }
+      }
+
+      /* Add styles for the contact form */
+      form {
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1 ;
+        color: #333;
+        padding: 1rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 90%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      /* Use media query to adjust the max width of inputs on small screens */
+      @media (max-width: 600px) {
+        form {
+          flex-direction: column;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          max-width: 90%;
+          margin: 0.5em 0;
+        }
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      /* Add styles for the project images */
+      img.project {
+        width: 100%;
+      }
+
+      /* Add hover effect to project images */
+      img.project:hover {
+        opacity: 0.7;
+      }
+
+      /* Use flexbox to align skills horizontally */
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Add margin and padding to skills */
+      li {
+        margin-right: 1em;
+        padding: 0.5em;
+      }
+
+      /* Add hover effect to skills */
+      li:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Use media query to adjust skills layout on small screens */
+      @media (max-width: 600px) {
+        li {
+          width: 100%;
+          text-align: center;
+          margin-right: 0;
+        }
+      }
+
+      /* center the name and email container */
+      .name-email-container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      /* Use media query to adjust layout on small screens */
+      @media (max-width: 600px) {
+        .name-email-container {
+          flex-direction: column;
+        }
+      }
+      /* position the submit button and contact information at the end */
+      .form-actions {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .form-contact-info {
+        text-align: center;
+      }
+      /* Add hover effect to submit button */
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      /* Add hover effect to the links */
+      .form-actions a,
+      .form-contact-info a {
+        color: blue;
+        text-decoration: none;
+      }
+      .form-actions a:hover,
+      .form-contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Use media query to adjust layout on small screens */
+      @media (max-width: 600px) {
+        .container {
+          width: 90%;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Software Specialist Portfolio</h1>
+    </header>
+
+    <div class="container">
+      <section class="skills">
+        <h2>Marketable Skills</h2>
+        <ul>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>C#</li>
+          <li>ReactJS</li>
+          <li>Node.js</li>
+        </ul>
+      </section>
+
+      <section class="mission">
+        <h2>Mission Statement</h2>
+        <p>
+          I strive to create innovative and user-friendly software solutions
+          that improve the lives of individuals and businesses.
+        </p>
+      </section>
+
+      <section class="summary">
+        <h2>Career Summary</h2>
+        <p>
+          I am a software specialist with over 5 years of experience in the
+          industry. I have a strong background in JavaScript, Python, Java, and
+          C#, and have experience working on a variety of projects, including
+          web applications, mobile apps, and desktop software. I am constantly
+          learning new technologies and techniques to improve my skills and
+          deliver the best possible solutions to my clients.
+        </p>
+      </section>
+
+      <section class="projects">
+        <h2>Showcase Projects</h2>
+        <h3>Project 1</h3>
+        <img class="project" src="project1.jpg" alt="Project 1" />
+        <p>Brief description of project 1.</p>
+
+        <h3>Project 2</h3>
+        <img class="project" src="project2.jpg" alt="Project 2" />
+        <p>Brief description of project 2.</p>
+      </section>
+
+      <aside class="contact">
+        <h2>Contact Information</h2>
+        <p>Name: John Doe</p>
+        <p>Email: johndoe@email.com</p>
+        <p>Phone: 555-555-5555</p>
+      </aside>
+    </div>
+
+    <section class="contact-me">
+      <div class="container">
+        <h2>Let's Connect</h2>
+        <p>
+          I would love to hear from you! Whether you have a question, a project
+          idea, or just want to say hi, please fill out the form below and I'll
+          get back to you as soon as possible.
+        </p>
+        <form>
+          <div class="name-email-container">
+            <div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name.."
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email.."
+                required
+              />
+            </div>
+          </div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write something.."
+            required
+          ></textarea>
+          <div class="form-actions">
+            <input type="submit" value="Submit" />
+          </div>
+          <p class="form-contact-info">
+            Or contact me at <a href="tel:555-555-5555">555-555-5555</a> or
+            <a href="mailto:johndoe@email.com">johndoe@email.com</a>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Contact Information</h2>
+      <p>Name: John Doe</p>
+      <p>Email: johndoe@email.com</p>
+      <p>Phone: 555-555-5555</p>
+    </footer>
+  </body>
+</html>

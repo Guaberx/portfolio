@@ -1,0 +1,25 @@
+.Navbar {
+  --paddingcalc: 2em;
+  /* background-color: var(--color-primary-500); */
+  /* position: relative; */
+  color: var(--color-secondary-500);
+  margin: 0;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  /* El padding hace que se crezca el objeto. Hay que recalcularlo */
+  width: calc(100% - 2 * var(--paddingcalc));
+  text-decoration: none;
+  padding: 0.3em var(--paddingcalc);
+}
+
+.Navbar img {
+  /* object-fit: contain; */
+  max-height: var(--height);
+}
+
+.Navbar > * {
+  margin: 0;
+}

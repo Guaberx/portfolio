@@ -1,0 +1,99 @@
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1700px) {
+  .container {
+    width: 1700px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1700px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.navbarContentFooter {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+.navbarContentFooter > * {
+  margin-bottom: 10rem;
+}
+
+/* */
+.containerDynamic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  /* justify-content: center; */
+}
+
+.c1ontainerColumns {
+}
+.containerColumns {
+  /**
+  * User input values.
+  */
+  --grid-layout-gap: 10px;
+  --grid-column-count: 2;
+  --grid-item--min-width: 100px;
+  /* --min-item-size: calc(100% / var(var(--grid-column-count))); */
+  /**
+  * Calculated values.
+  */
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc(
+    (100% - var(--total-gap-width)) / var(--grid-column-count)
+  );
+
+  display: grid;
+  gap: var(--grid-layout-gap);
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
+  );
+
+  /* justify-content: space-evenly; */
+  /* justify-items: left; */
+}
+
+/* .containerColumns > *{
+  width: 100%;
+} */
+
+.containerColumns.smallScreen {
+  grid-template-columns: repeat(1, 1fr);
+}
+/* 
+@media (max-width: 605px) {
+  .containerColumns {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+} */

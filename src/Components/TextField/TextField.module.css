@@ -1,0 +1,27 @@
+.textField{
+  color: var(--color-secondary-300);
+  white-space: pre-line;
+  line-height: 2em;
+  font-size: large;
+  text-align: -webkit-auto;
+  width: 100%;
+}
+
+.textTitleField {
+  /* background-color: var(--color-secondary-500); */
+}
+
+.title{
+  color: var(--color-secondary-500);
+  white-space: pre-line;
+  /* font-size: x-large; */
+  font-weight: bold;
+}
+
+.subTitle{
+  /* color: var(--color-secondary-300); */
+  color: var(--color-ternary-500);
+  white-space: pre-line;
+  /* font-size: x-large; */
+  font-weight: bold;
+}

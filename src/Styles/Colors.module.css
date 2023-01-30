@@ -1,0 +1,60 @@
+/* Dark Theme */
+.dark {
+  --color-primary-800: #000;
+  --color-primary-500: rgb(24, 24, 24);
+  --color-primary-300: rgb(37, 37, 37);
+  --color-secondary-800: #cecece;
+  --color-secondary-500: #e7e7e7;
+  --color-secondary-300: #ffffff;
+  --color-ternary-500: #04b0e4;
+}
+
+.light {
+  --color-primary-800: #cecece;
+  --color-primary-500: #e7e7e7;
+  --color-primary-300: #ffffff;
+  --color-secondary-800: #000;
+  --color-secondary-500: rgb(24, 24, 24);
+  --color-secondary-300: rgb(37, 37, 37);
+  --color-ternary-500: #04b0e4;
+}
+
+.otro {
+  --color-primary-800: #1b1422;
+  --color-primary-500: #3f2f50;
+  --color-primary-300: #CAADEA;
+  --color-secondary-800: #04645f;
+  --color-secondary-500: #04e4da;
+  --color-secondary-300: #a4fffa;
+  --color-ternary-500: #fb7a2b;
+}
+
+/* Light Theme */
+/* :root {
+  --color-primary-800: #2C4866;
+  --color-primary-500: #4775A6;
+  --color-primary-300: #63A2E6;
+  --color-secondary-800: #cecece;
+  --color-secondary-500: #e7e7e7;
+  --color-secondary-300: #ffffff;
+  --color-ternary-500: #fb7a2b;
+} */
+
+/* Logo colors Theme */
+/* :root {
+  --color-primary-800: #1b1422;
+  --color-primary-500: #3f2f50;
+  --color-primary-300: #CAADEA;
+  --color-secondary-800: #04645f;
+  --color-secondary-500: #04e4da;
+  --color-secondary-300: #a4fffa;
+  --color-ternary-500: #fb7a2b;
+} */
+
+/* Green Theme */
+/* :root {
+  --color-primary-300: #4f6955;
+  --color-primary-500: #2c3a2f;
+  --color-primary-800: #1b2420;
+  --color-secondary-500: #f6fbf7;
+} */

@@ -1,0 +1,51 @@
+.Card {
+  --card-color: rgb(188, 170, 235);
+  --surface-color: rgb(179, 167, 211);
+  --curve: 20;
+}
+
+.Card {
+  margin: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: var(--color-secondary-500);
+  border-radius: calc(var(--curve) * 1px);
+  /* min-width: 6em;
+  min-height: 15em; */
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.Card > img {
+  width: 100%;
+  height: auto;
+}
+
+.Card .content {
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
+  margin: 0 2em;
+  /* border-radius: calc(var(--curve) * 1px); */
+  /* background-color: var(--surface-color); */
+  transition: 0.2s ease-in-out;
+  /* transform: translateY(100%); */
+}
+
+.Card:hover .content {
+  transform: translateY(0);
+}
+
+/* .Card {
+  border-radius: 15%;
+  gap: 2rem;
+  display: grid;
+  margin: 4rem 5vw;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
+  align-items: center;
+  width: 20rem;
+  transition: 0.3s;
+} */
+
+.Card:hover {
+  box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,12 @@
+.button {
+  --paddingWidth: 1em;
+  --paddingHeight: 0.5em;
+  padding: var(--paddingHeight) var(--paddingWidth);
+  background-color: var(--color-secondary-500);
+  color: var(--color-primary-800);
+  border-radius: 10%;
+  border: none;
+  text-align: center;
+  font-size: medium;
+  cursor: pointer;
+}
