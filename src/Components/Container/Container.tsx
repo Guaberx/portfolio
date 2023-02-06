@@ -13,11 +13,12 @@ export const Container: React.FunctionComponent<PropsContainer> = ({
     ? { maxWidth: `${contentMaxWidth}px`, ...props.style }
     : props.style;
   return (
-    <div
-      className={`${styles.container} ${props.className}`}
-      style={newStyle}
-      {...props}
-    >
+    // <div
+    //   className={`${styles.container} ${props.className}`}
+    //   style={newStyle}
+    //   {...props}
+    // >
+    <div className={`${styles.container} ${props.className}`}>
       {props.children}
     </div>
   );

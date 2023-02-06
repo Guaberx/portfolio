@@ -7,6 +7,7 @@ import { Navbar } from "../Components/Narvar";
 import { TextTitleField } from "../Components/TextField";
 import {
   Container,
+  ContainerMain,
   ContainerDynamic,
   ContainerNavbarContentFooter,
 } from "../Components/Container";
@@ -66,11 +67,11 @@ const Home = () => {
   const maxWidth = 1000;
 
   return (
-    <Container
+    <ContainerMain
       contentMaxWidth={1000}
       style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
     >
-      <img src={logo} style={{ width: "20rem", height: "auto" }}></img>
+      {/* <img src={logo} style={{ width: "20rem", height: "auto" }}></img> */}
       
       <Title style={{ color: "var(--color-ternary-500)" }}>About Me</Title>
 
@@ -138,7 +139,7 @@ const Home = () => {
 
               - Renewed a web app used to sell services to new clients. Configured a CI/CD pipeline for the app with Jenkins and IBM's GitHub, and improved the app's user interface for better responsiveness.`}
       </TextField>
-    </Container>
+    </ContainerMain>
   );
 };
 

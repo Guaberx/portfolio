@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`app ${theme}`}>
-        <RouterProvider router={router} />;
+        <RouterProvider router={router} />
       </div>
     </ThemeContext.Provider>
   );

@@ -19,5 +19,5 @@ export const ContainerNavbarContentFooter: React.FunctionComponent<PropsContaine
     <div className={`${styles.navbarContentFooter} ${className}`} style={style} {...props}>
       {children}
     </div>
-  );
+  )
 };

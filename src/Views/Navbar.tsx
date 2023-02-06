@@ -3,36 +3,16 @@ import React, { useContext } from "react";
 import { Navbar as NavbarComponent } from "../Components/Narvar";
 
 import juanfer from "../Assets/Profile cropped green.png";
-import logo from "../Assets/Guaberx_Logo_No_Background.png";
+import logo from "../Assets/logo192.png";
 import { Button } from "../Components/Button";
 import { ThemeContext } from "../Contexts/ThemeContext";
+import { Container, ContainerDynamic } from "../Components/Container";
 
 export const Navbar = () => {
-  const maxWidth = 1000;
-  const profilePicture = (
-    <div
-      style={{
-        width: "auto",
-        margin: 0,
-        maxWidth: `500px`,
-      }}
-    >
-      <img
-        style={{
-          // objectFit: "cover",
-          width: "100%",
-          // height: "auto",
-        }}
-        // src="https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/master/pass/BlackForest-Germany-GettyImages-147180370.jpg"
-        src={juanfer}
-        alt={"Profile Picture"}
-      ></img>
-    </div>
-  );
 
   const { theme, setTheme } = useContext(ThemeContext);
   return (
-    <NavbarComponent style={{ maxWidth: `${maxWidth}px` }}>
+    <NavbarComponent>
       <img
         // src="https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/master/pass/BlackForest-Germany-GettyImages-147180370.jpg"
         src={logo}
@@ -59,7 +39,7 @@ export const Navbar = () => {
       >
         {theme}
       </Button>
-      <div style={{ display: "flex", gap: "1em" }}>
+      <ContainerDynamic >
         <Button
           style={{ fontWeight: "bold" }}
           onClick={() => {
@@ -98,7 +78,7 @@ export const Navbar = () => {
         >
           Work Experience
         </Button>
-      </div>
+      </ContainerDynamic>
     </NavbarComponent>
   );
 };

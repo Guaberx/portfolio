@@ -16,6 +16,7 @@ import Home from "../Views/Home";
 import { NavbarContentFooter } from "../Layouts/NavbarContentFooter";
 
 import { NotFound } from "../Views/NotFound";
+import { DebugLayout } from "../Layouts/DebugLayout";
 
 const RouteIndex: RouteObject = {
   path: "/",
@@ -39,7 +40,7 @@ const RouteLogin: RouteObject = {
 };
 
 const RouteDebut: RouteObject = {
-  path: "/debug",
+  path: "/o",
   element: <Option1 />,
   children: [
     {
@@ -70,6 +71,10 @@ export default createBrowserRouter([
   {
     path: "contacts/:contactId",
     // element: <Contact />,
+  },
+  {
+    path: "debug",
+    element: <DebugLayout />,
   },
   // {
   //   path: "*",

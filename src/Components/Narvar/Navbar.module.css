@@ -1,38 +1,17 @@
 .Navbar {
-  --height: 3rem;
-  --paddingcalc: 2em;
-  background-color: var(--color-secondary-500);
-  /* position: relative; */
-  color: var(--color-secondary-500);
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
+  background-color: red;
+  display: grid;
+  gap:1rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  justify-content: space-evenly;
+  justify-items: center;
   align-items: center;
-  justify-content: space-between;
-  height: 3rem;
-  /* El padding hace que se crezca el objeto. Hay que recalcularlo */
-  width: calc(100% - 2 * var(--paddingcalc));
-  text-decoration: none;
-  padding: 0.3em 2em;
-
-  /* position: fixed;
-  top: 0;
-
-  background-color: black;
-
-  transition: all .3s ease-in; */
+  text-align: center;
 }
 
-.Navbar > img{
-  height: var(--height);
-}
-
-@media (max-width: 700px) {
+@media (max-width: 35em) {
   .Navbar {
-    height: auto;
-    justify-content: center;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -40,12 +19,8 @@
   height: 20px;
 }
 
-.Navbar > *{
-  max-height: 100%;
-}
-.Navbar img {
-  /* object-fit: contain; */
-  max-height: 100%;
+.Navbar img{
+  max-height: 3rem;
 }
 
 .Navbar > * {
