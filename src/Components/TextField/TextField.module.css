@@ -4,7 +4,6 @@
   line-height: 2em;
   font-size: large;
   text-align: -webkit-auto;
-  width: 100%;
 }
 
 .textTitleField {
@@ -12,7 +11,7 @@
 }
 
 .title{
-  color: var(--color-secondary-500);
+  color: var(--color-ternary-500);
   white-space: pre-line;
   /* font-size: x-large; */
   font-weight: bold;

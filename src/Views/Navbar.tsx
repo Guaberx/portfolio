@@ -7,19 +7,25 @@ import logo from "../Assets/logo192.png";
 import { Button } from "../Components/Button";
 import { ThemeContext } from "../Contexts/ThemeContext";
 import { Container, ContainerDynamic } from "../Components/Container";
+import { Title } from "../Components/TextField/Title";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
 
   const { theme, setTheme } = useContext(ThemeContext);
+  // const navigate = useNavigate()
   return (
     <NavbarComponent>
-      <img
-        // src="https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/master/pass/BlackForest-Germany-GettyImages-147180370.jpg"
-        src={logo}
-        alt={"Forest Image"}
-        style={{ borderRadius: "50%" }}
-      ></img>
-      <h1>Juan Fernando Otoya</h1>
+      <Link to="/">
+        <img
+          // src="https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/master/pass/BlackForest-Germany-GettyImages-147180370.jpg"
+          src={logo}
+          alt={"Forest Image"}
+          style={{ borderRadius: "50%" }}
+          // onClick={()=>{navigate("/")}}
+        ></img>
+      </Link>
+      <Title>Juan Fernando Otoya</Title>
       <Button
         onClick={() => {
           switch (theme) {
@@ -29,9 +35,9 @@ export const Navbar = () => {
             case "light":
               setTheme("otro");
               break;
-              case "otro":
-                setTheme("dark");
-                break;
+            case "otro":
+              setTheme("dark");
+              break;
             default:
               break;
           }
@@ -39,46 +45,6 @@ export const Navbar = () => {
       >
         {theme}
       </Button>
-      <ContainerDynamic >
-        <Button
-          style={{ fontWeight: "bold" }}
-          onClick={() => {
-            const element = document.getElementById("contact");
-            if (element) {
-              // 👇 Will scroll smoothly to the top of the next section
-              element.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Contact me
-        </Button>
-
-        <Button
-          style={{ fontWeight: "bold" }}
-          onClick={() => {
-            const element = document.getElementById("skills");
-            if (element) {
-              // 👇 Will scroll smoothly to the top of the next section
-              element.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Skills
-        </Button>
-
-        <Button
-          style={{ fontWeight: "bold" }}
-          onClick={() => {
-            const element = document.getElementById("work-experience");
-            if (element) {
-              // 👇 Will scroll smoothly to the top of the next section
-              element.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Work Experience
-        </Button>
-      </ContainerDynamic>
     </NavbarComponent>
   );
 };

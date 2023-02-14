@@ -7,7 +7,7 @@
   width: 80%;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--color-primary-500);
+  background-color: var(--color-primary-300);
   border-radius: 1rem;
   transition: all .2s ease-in;
 }

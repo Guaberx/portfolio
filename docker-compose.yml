@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  portfolio:
+    container_name: portfolio
+    # build:
+    #   context: ./
+    #   dockerfile: ./Dockerfile
+    # image: portfolio:latest
+    image: "node:18.14-alpine"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/app
+    working_dir: /home/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm start"

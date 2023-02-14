@@ -104,7 +104,7 @@ const Option1 = () => {
       {/* <ExternalPage url="http://localhost:3000/o" /> */}
       <aside>
         <ListNumbered>
-          <a href="">test</a>
+          <a href="#">test</a>
           <p>ptest</p>
           <h1>h1test</h1>
           <Button>ButtonTest</Button>

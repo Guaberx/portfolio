@@ -10,7 +10,7 @@ import router from "./Routes/Router";
 import { ThemeContext } from "./Contexts/ThemeContext";
 
 function App() {
-  const [theme, setTheme] = useState<"light" | "dark" | "otro">("light");
+  const [theme, setTheme] = useState<"light" | "dark" | "otro">("dark");
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`app ${theme}`}>

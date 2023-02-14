@@ -41,20 +41,25 @@ export const DebugLayout = () => {
         <Button>Button2</Button>
         <Button>Button3</Button>
       </Navbar>
-      <div>Content</div>
+      <Container>
+
+        <div>Content</div>
+        <div>Content</div>
+        <div>Content</div>
+      </Container>
       <Footer>
         {/* {tmpCard} */}
         {/* mailto:johndoe@email.com tel:555-555-5555 */}
-        <Form
+        {/* <Form
           id="contact"
-          onSubmit={()=>{}}
+          onSubmit={() => { }}
           title="Let's Connect"
         // description="I would love to hear from you! Whether you have a question, a project idea, or just want to say hi, please fill out the form below and I'll get back to you as soon as possible."
         >
           <input name="email" type="email" placeholder="Youremail@example.com" />
           <input name="subject" type="subject" placeholder="Subject..." />
           <textarea name="message" placeholder="Your message..." />
-        </Form>
+        </Form> */}
         {/* {tmpCard} */}
       </Footer>
     </ContainerNavbarContentFooter>

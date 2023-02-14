@@ -1,8 +1,9 @@
 .container {
   display: grid;
+  gap: 1rem;
   justify-items: center;
   align-items: center;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .containerMain {
@@ -11,6 +12,10 @@
   justify-items: center;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.containerMain > *{
+  width: 100%;
 }
 
 @media (min-width: 85rem) {
@@ -49,9 +54,10 @@
 /* */
 .containerDynamic {
   display: flex;
-  align-items: center;
+  width: 100%;
   flex-wrap: wrap;
   gap: 1rem;
+  /* align-items: center; */
   justify-content: space-around;
   /* justify-content: center; */
 }

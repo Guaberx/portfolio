@@ -66,70 +66,124 @@ const Home = () => {
 
   const maxWidth = 1000;
 
+
   return (
     <ContainerMain
       contentMaxWidth={1000}
-      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", gap: "10rem", marginTop: "5rem" }}
     >
       {/* <img src={logo} style={{ width: "20rem", height: "auto" }}></img> */}
-      
-      <Title style={{ color: "var(--color-ternary-500)" }}>About Me</Title>
 
-      <TextField style={{ textAlign: "justify" }}>
-        {`As an experienced and dedicated software developer, I have honed a diverse set of skills through my professional experience in the tech industry. I am a solution-oriented individual who possesses a strong ability to listen and help others. I am passionate about learning and creating clean and well-developed software.`}
-      </TextField>
-
-      <Title
-        id="skills"
-        style={{ marginBottom: "1rem", color: "var(--color-ternary-500)" }}
-      >
-        Key Skills
-      </Title>
       <ContainerDynamic>
-        {Object.keys(skills).map((skillTitle) => (
-          <div>
-            <SubTitle>{skillTitle}</SubTitle>
-            <ListNumbered>
-              {skills[skillTitle].map((skill) => (
-                <h3 style={{}}>{skill}</h3>
-              ))}
-            </ListNumbered>
-          </div>
-        ))}
+        <Button
+          style={{ fontWeight: "bold" }}
+          onClick={() => {
+            const element = document.getElementById("contact");
+            if (element) {
+              // 👇 Will scroll smoothly to the top of the next section
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          Contact me
+        </Button>
+
+        <Button
+          style={{ fontWeight: "bold" }}
+          onClick={() => {
+            const element = document.getElementById("skills");
+            if (element) {
+              // 👇 Will scroll smoothly to the top of the next section
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          Skills
+        </Button>
+
+        <Button
+          style={{ fontWeight: "bold" }}
+          onClick={() => {
+            const element = document.getElementById("work-experience");
+            if (element) {
+              // 👇 Will scroll smoothly to the top of the next section
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          Work Experience
+        </Button>
       </ContainerDynamic>
 
+      <Container>
+        <Title style={{ color: "var(--color-ternary-500)" }}>About Me</Title>
+
+        <TextField style={{ textAlign: "justify" }}>
+          {`As an experienced and dedicated software developer, I have honed a diverse set of skills through my professional experience in the tech industry. I am a solution-oriented individual who possesses a strong ability to listen and help others. I am passionate about learning and creating clean and well-developed software.`}
+        </TextField>
+      </Container>
+
+      <Container>
+        <Title
+          id="skills"
+          style={{ marginBottom: "1rem", color: "var(--color-ternary-500)" }}
+        >
+          Key Skills
+        </Title>
+        <ContainerDynamic style={{alignItems:"baseline"}}>
+          {Object.keys(skills).map((skillTitle) => (
+            <Container style={{ minWidth: "300px", gap:0}}>
+              <SubTitle style={{alignSelf:"center"}}>{skillTitle}</SubTitle>
+              <ListNumbered>
+                {skills[skillTitle].map((skill) => (
+                  <h3 style={{}}>{skill}</h3>
+                ))}
+              </ListNumbered>
+            </Container>
+          ))}
+        </ContainerDynamic>
+      </Container>
+
       <ContainerDynamic>
-        <Title>Education</Title>
-        <TextField>
-          {`B.S. in Computer science,
+        <Container>
+          <Title>Education</Title>
+          <TextField>
+            {`B.S. in Computer science,
               Pontificia Universidad Javeriana,
               CO, 2023`}
-        </TextField>
+          </TextField>
+        </Container>
 
-        <Title style={{ marginBottom: "1rem" }}>Languages</Title>
-        <TextField>
-          {`English - Fluent
+        <Container>
+          <Title style={{}}>Languages</Title>
+          <TextField>
+            {`English - Fluent
               Spanish - Fluent
               German - Good`}
-        </TextField>
+          </TextField>
+        </Container>
 
-        <Title style={{ marginBottom: "1rem" }}>Certificates</Title>
-        <TextField>
-          {`-
-              -
-              -`}
-        </TextField>
+        <Container>
+          <Title style={{}}>Certificates</Title>
+          <TextField>
+            {`- AWS Cloud Practitioner
+              - AWS Solution Architect
+              - Imagine a certificate which comes with a link or something longer
+              `}
+          </TextField>
+        </Container>
       </ContainerDynamic>
 
-      <Title>Work Experience</Title>
-      <SubTitle style={{ marginBottom: "1rem" }}>
-        {`IBM
+      <Container>
+        <Title id="work-experience">Work Experience</Title>
+        <SubTitle style={{}}>
+          {`IBM
           Application Developer | Software Specialist | consultant
           Jan 2022 - Present`}
-      </SubTitle>
+        </SubTitle>
 
-      <TextField style={{ textAlign: "justify" }}>
-        {`- Acted as a consultant in the banking industry, creating an MQ (messaging queue) library for the bank and migrating some of their transactions to an MQ schema.
+        <TextField style={{ textAlign: "justify", marginBottom: "5rem" }}>
+          {`- Acted as a consultant in the banking industry, creating an MQ (messaging queue) library for the bank and migrating some of their transactions to an MQ schema.
 
               - Reviewed the current state of an inner project used to manage employees' funds, improving the current code base architecture and fixing some security issues that I identified.
 
@@ -138,7 +192,8 @@ const Home = () => {
               - Developed and integrated an electronic signature with a third-party provider in the employees' fund project.
 
               - Renewed a web app used to sell services to new clients. Configured a CI/CD pipeline for the app with Jenkins and IBM's GitHub, and improved the app's user interface for better responsiveness.`}
-      </TextField>
+        </TextField>
+      </Container>
     </ContainerMain>
   );
 };
